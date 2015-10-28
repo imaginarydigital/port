@@ -1,9 +1,47 @@
 <!DOCTYPE>
-<html>
+<html ng-app="app">
 <head>
-  <title>James Taylor Portfolio</title>
-</head>
-<body>
+  <title>James Taylor Angular</title>
 
+  <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body class="text-center" ng-controller="MainCtrl">
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Blah</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">link</a></li>
+        <li><a href="#portfolio">link</a></li>
+        <li><a href="#contact">link</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <h1>name: {{ yourName }}</h1>
+      <h1>ext: {{ext}}</h1>
+
+<div ng-view>
+
+</div>
+
+      <script type="text/javascript" src="js/vendors.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
