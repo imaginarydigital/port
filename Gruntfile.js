@@ -83,7 +83,11 @@ module.exports = function (grunt){
       },
       vendor: {
         src: [
-          './app/assets/js/vendor/*.js'
+          './app//assets/js/vendor/jquery-2.1.1.min.js',
+          './app//assets/js/vendor/angular.min.js',
+          './app//assets/js/vendor/angular-route.min.js',
+          './app//assets/js/vendor/angular-animate.min.js',
+          './app//assets/js/vendor/bootstrap.min.js'
         ],
         dest: './www/js/vendors.js'
       }
