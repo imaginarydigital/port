@@ -87,6 +87,7 @@ module.exports = function (grunt){
           './app//assets/js/vendor/angular.min.js',
           './app//assets/js/vendor/angular-route.min.js',
           './app//assets/js/vendor/angular-animate.min.js',
+          './app//assets/js/vendor/angular-messages.min.js',
           './app//assets/js/vendor/bootstrap.min.js'
         ],
         dest: './www/js/vendors.js'

@@ -1,6 +1,11 @@
-angular.module('app', ['ngRoute', 'ngAnimate']);
-// Routing configuration
+angular.module('app', [
+  'ngRoute',
+  'ngAnimate',
+  'ngMessages'
+]);
 
+
+// Routing configuration
 angular.module('app').config(['$routeProvider', function ($routeProvider){
   $routeProvider
     .when('/', {
