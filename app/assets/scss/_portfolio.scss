@@ -1,0 +1,16 @@
+.panel-footer{
+	background-color: #000;
+}
+.panel{
+	border: 1px solid #000;
+}
+
+.portfolio{
+	.btn{
+		background-color: #CD3333;
+		&:hover{
+			background-color: darken(#CD3333, 20%);
+			border-color: darken(#CD3333, 20%);
+		}
+	}
+}

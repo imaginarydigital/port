@@ -1,1 +1,25 @@
-<h1>Portfolio view</h1>
+<div class="row portfolio">	
+	<div class="col-sm-8 col-sm-offset-2">
+	<!-- <p>Here are a few projects that I built to learn AngularJS and make use some of its core features such as routing, directives and two-way data binding.</p> -->
+		<ul class="list-inline">
+			<li ng-repeat="project in projects">
+				<div class="panel panel-default">
+				  <div class="panel-header">
+				  	<p>{{project.projectName}}</p>
+				  </div>
+				  <div class="panel-body">
+				   	<img ng-src="images/{{project.image}}" alt="{{project.alt}}">
+				  </div>
+				  <div class="panel-footer">
+				  	<a href="{{project.githubPage}}" target="_blank">
+				  		<button href="" class="btn btn-primary">DEMO</button>
+				  	</a>
+				  	<a href="{{project.code}}" target="_blank">
+				  		<button href="" class="btn btn-primary">CODE</button>
+				  	</a>
+				  </div>
+				</div>					
+			</li>
+		</ul>
+	</div>
+</div>

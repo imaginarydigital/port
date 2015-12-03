@@ -1,27 +1,107 @@
-.navbar{
-	min-height: 70px;
-	background-color: #fff;
-	border: none;
-	border-radius: 0;
+a:active, a:focus {
+    outline: none;
 }
 
-li{
-	margin-top: 10px;
-	min-height: 60px;
+.collapsed-btn:link,
+.collapsed-btn:visited,
+.collapsed-btn:hover,
+.collapsed-btn:active{
+  color: #fff;
 }
 
-.nav-name{
-	font-size: 1.6em;
-	margin-bottom: 5px;
-	display: inline-block;
+.mobile-nav-bg{
+  background-color: black;
 }
-.role{
-	display: inline-block;
-	font-size: .8em;
+
+@media only screen and (min-width : 320px) {
+    // .collapsed-btn{
+    //   display: block;
+    //   margin-top: 25px;
+    // }
+    .nav{
+    display: none;
+    // height: 66px;
+    height: auto;
+    // margin-top: 25px;
+    margin-bottom: 50px;
+   
+    background-color: #000;
+    border: none;
+    li{
+      display: block;
+      width: 100%;
+      float: none;
+      background-color: #000;
+      color: #fff;
+     
+
+
+      a{
+        color: #fff;
+        height: 67px;
+        background-color: #000;
+        font-size: 1.1em;
+        letter-spacing: .1em;
+        padding-top: 20px;
+        border: none;
+
+
+      }
+    }
+
+
+    // background-color: $dark-blue;
+  }
 }
+
+
+@media only screen and (min-width : 768px) {
+    .collapsed-btn{
+      display: none;
+    }
+    .nav{
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    height: 66px;
+    background-color: #000;
+    border: none;
+    li{
+      background-color: #000;
+      color: #fff;
+     
+
+
+      a{
+        color: #fff;
+        height: 67px;
+        background-color: #000;
+        font-size: 1.1em;
+        letter-spacing: .1em;
+        padding-top: 20px;
+        border: none;
+
+
+      }
+    }
+
+
+    // background-color: $dark-blue;
+  }
+}
+
+.nav > li > a:focus, .nav > li > a:hover{
+  background-color: #000 !important;
+}
+
+
+
+
+// collapsed styles
+
 
 /* Underline From Center */
-.hvr-underline-from-center {
+.nav-item {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
@@ -33,15 +113,15 @@ li{
   position: relative;
   overflow: hidden;
 }
-.hvr-underline-from-center:before {
+.nav-item:before {
   content: "";
   position: absolute;
   z-index: -1;
   left: 50%;
   right: 50%;
   bottom: 0;
-  background: #2098d1;
-  height: 4px;
+  background:#CD3333;
+  height: 5px;
   -webkit-transition-property: left, right;
   transition-property: left, right;
   -webkit-transition-duration: 0.3s;
@@ -49,7 +129,54 @@ li{
   -webkit-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
-.hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+.nav-item:hover:before, .nav-item:focus:before, .nav-item:active:before {
   left: 0;
   right: 0;
+}
+
+
+/* Float Shadow */
+.btn-resume {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.btn-resume:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.btn-resume:hover, .btn-resume:focus, .btn-resume:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.btn-resume:hover:before, .btn-resume:focus:before, .btn-resume:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
 }

@@ -1,45 +1,70 @@
 <!DOCTYPE>
-<html ng-app="app">
+<html lang-"en" ng-app="app">
 <head>
-  <title>James Taylor Angular</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>James Taylor II</title>
+  <meta name="description" content="Frontend Developer Portfolio James Taylor II">
+  <meta name="keywords" content="Frontend Developer Portfolio James Taylor">
 
-  <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/vendor/bootstrap.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body class="text-center" ng-controller="MainCtrl">
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><strong><span class="nav-name">James Taylor</span></strong><br><span class="role"><i>Frontend Developer</i></span></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li class="hvr-underline-from-center"><a href="#home">Home</a></li>
-        <li class="hvr-underline-from-center"><a href="#skills">Skills</a></li>
-        <li class="hvr-underline-from-center"><a href="#portfolio">Portfolio</a></li>
-        <li class="hvr-underline-from-center"><a href="#contact">Contact</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-
-<!-- container for main contents -->
-<div class="container">
-  <div ng-view></div>
+<div class="head-bg">
+  <div class="container">
+      <!-- header row -->
+      <div class="row header-row">
+        <div class="col-sm-12">
+          <!-- <header>
+            <h1 class="name-header" data-in-effect="tada"><span class="fn">James</span> Taylor</h1>
+            <h3 class="subheader" data-in-effect="tada">Frontend Developer</h3>
+            <div class="social">
+              <ul class="list-inline">
+                <li><a href="https://www.linkedin.com/in/taylorje"><i class="fa fa-2x fa-linkedin-square"></i></a></li>
+                <li><a href="mailto:jtaylorii@outlook.com"><i class="fa fa-2x fa-envelope"></i></a></li>
+                <li><a href="https://github.com/taylorjeii"><i class="fa fa-2x fa-github-square"></i></a></li>
+              </ul>
+            </div>
+            <a href="download/Resume-JamesTaylorII.pdf" target="_blank" download="jtaylor.pdf"><button class="btn btn-primary btn-resume">Download My Resume</button></a>
+          </header> -->
+        </div>
+      </div>
+      <!-- End header row -->
+  </div>
 </div>
 
+<div class="row">
+  <div class="mobile-nav-bg">
+    <a href="#" class="collapsed-btn">
+    <button class="c-hamburger c-hamburger--htx">
+          <span>toggle menu</span>
+    </button>
+    </a>
+  </div>
+  
+  <ul class="nav nav-tabs nav-justified">
+    <li><a class="nav-item" href="#home">Home</a></li>
+    <li><a class="nav-item" href="#portfolio">Portfolio</a></li>
+    <li><a class="nav-item" href="#contact">Contact</a></li>
+  </ul>
+</div>
 
-      <script type="text/javascript" src="js/vendors.js"></script>
-      <script type="text/javascript" src="js/script.js"></script>
+<div class="main-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="view-container">
+          <div ng-view class="view"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/vendors.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+
 </body>
 </html>

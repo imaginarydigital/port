@@ -1,0 +1,31 @@
+form input[type="text"][disabled], form textarea[disabled] {
+    background:#fff
+}
+
+form input[type="text"].error, form textarea.error {
+    background:#e6e6e6;
+    border-color:#c0392b
+}
+
+#success, #error {
+    display:none;
+    
+    font-weight: 100;
+    text-align: left;
+}
+#success span, #erro span {
+    display:block;
+    position:absolute;
+    top:0;
+    width:100%;
+    text-align:center;
+}
+#success span p, #error span p {
+    margin-top:50px;
+}
+#success span p {
+  color: #000;
+}
+#error span p {
+  color:#c0392b;
+}

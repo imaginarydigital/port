@@ -1,10 +1,86 @@
-
+html, body{
+	min-height: 100%;
+	position: relative;
+}
 
 html{
   font-size: 16px;
 
 }
 body{
-  background-color: $light-blue;
+  background-color: #fff;
   font-family: $main-font;
 }
+
+p{
+	font-size: 1.1em;
+}
+
+.fa{
+	color: #000;
+	&:hover{
+		color: #cd3333;
+	}
+}
+
+button:focus { outline:0 !important; }
+
+// @media (max-width: 320px){
+
+// }
+
+// @media (max-width: 559px){
+
+// }
+
+.fa-bars{
+	color: #fff;
+	&:hover{
+		color: #fff;
+	}
+}
+
+.name-header{
+	// margin-top: 50px;
+	font-size: 3.5em !important;
+	letter-spacing: .4em;
+}
+.view-container{
+	margin-bottom: 50px;
+}
+
+.btn{
+	background-color: #CD3333;
+	&:link,
+	&:visited,
+	&:hover,
+	&:active{
+		background-color: darken( #CD3333, 15%) !important;
+	}
+}
+
+.btn-primary{
+	background-color: #CD3333;
+	border-color:#CD3333;
+	&:hover{
+		border-color: darken( #CD3333, 15%) !important;
+	}
+	&:link,
+	&:visited,
+	&:hover,
+	&:active{
+		background-color: darken( #CD3333, 15%) !important;
+	}
+	
+}
+
+
+.head-bg{
+	background-color: #fff;
+}
+
+.main-bg{
+	background-color: #fff;
+	margin-top: 50px;
+}
+
