@@ -6,7 +6,7 @@
 
 .view.ng-enter,
 .view.ng-leave {
-    transition:1s linear all;
+    transition: 1s linear opacity;
 	position:absolute;
 }
 .view.ng-enter {  opacity:0; z-index:100;  }

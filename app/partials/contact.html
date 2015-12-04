@@ -1,59 +1,63 @@
-<form id="contactform" name="contactform" class="contact-form" method="post" ng-submit="submit(contactform)" novalidate>
 <div class="row">
-<div class="col-sm-8 col-sm-offset-2">
-<div class="form-group name-div" ng-class="{ 'has-error': contactform.name.$touched && contactform.name.$invalid }">
-    <label for="name">Name:</label>
-    <input type="text" class="form-control name" name="name" id="name" placeholder="John Smith" ng-model="contactController.name" ng-minlength="2" ng-maxlength="25" required>
+    <div class="col-sm-8 col-sm-offset-2">
+    <form id="contactform" name="contactform" class="contact-form" method="post" ng-submit="submit(contactform)" novalidate>
+    <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+    <div class="form-group name-div" ng-class="{ 'has-error': contactform.name.$touched && contactform.name.$invalid }">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control name" name="name" id="name" placeholder="John Smith" ng-model="contactController.name" ng-minlength="2" ng-maxlength="25" required>
 
-    <div class="help-block" ng-messages="contactform.name.$error" ng-if="contactform.name.$touched">
-    	<p ng-message="minlength">The name entered is too short.</p>
-    	<p ng-message="maxlength">The name entered is too long</p>
-    	<p ng-message="required">Your name is required</p>
-    </div>
-</div>
-
-<div class="form-group email-div" ng-class="{ 'has-error': contactform.email.$touched && contactform.email.$invalid }">
-    <label for="email" class="text-align">Email address:</label>
-    <input type="email" class="form-control email" id="email email" name="email" placeholder="jsmith@yahoo.com" required ng-model="contactController.email" ng-minlength="4">
-
-    <div class="help-block" ng-messages="contactform.email.$error" ng-if="contactform.email.$touched">
-    	<p ng-message="minlength">The email address entered is too short.</p>
-    	<p ng-message="required">Your email is required</p>
-    	<p ng-message="email">Please enter a valid email address</p>
-    </div>
-</div>
-
-<div class="form-group phone-div" ng-class="{ 'has-error': contactform.phoneNum.$touched && contactform.phoneNum.$invalid }">
-    <label for="phoneNum">Phone Number:</label>
-    <input type="text" class="form-control phone" id="phoneNum" name="phoneNum" placeholder="1234567890" ng-model="contactController.phoneNum" ng-pattern="/^\d+$/" ng-minlength="10" ng-maxlength="10" >
-
-     <div class="help-block" ng-messages="contactform.phoneNum.$error" ng-if="contactform.phoneNum.$touched">
-    	<p ng-message="minlength">Please enter your full 10 digit phone number.</p>
-    	<p ng-message="maxlength">Phone number must be no longer than 10 digits.(No dashes or periods)</p>
-    	<p ng-message="pattern">Please enter a valid phone number.(No dashes or periods)</p>
-    </div>
-</div>
-
-<div class="form-group message-div" ng-class="{ 'has-error': contactform.message.$touched && contactform.message.$invalid }">
-    <label for="message">Message</label>
-    <textarea class="form-control message" rows="3" placeholder="Hey James..." name="message" ng-model="contactController.message" ng-minlength="10" required></textarea>
-
-    <div class="help-block" ng-messages="contactform.message.$error" ng-if="contactform.message.$touched">
-    	<p ng-message="minlength">Please be more descriptive.</p>
-    	<p ng-message="required">Why are you reaching out?</p>
+        <div class="help-block" ng-messages="contactform.name.$error" ng-if="contactform.name.$touched">
+        	<p ng-message="minlength">The name entered is too short.</p>
+        	<p ng-message="maxlength">The name entered is too long</p>
+        	<p ng-message="required">Your name is required</p>
+        </div>
     </div>
 
-</div>
-<div class="button-div form-group">
-    <button style="color:white;" class="btn btn-pg btn-ct" type="submit" id="submit" name="submit">Submit</button>
-</div>
-</div>
-</div>
+    <div class="form-group email-div" ng-class="{ 'has-error': contactform.email.$touched && contactform.email.$invalid }">
+        <label for="email" class="text-align">Email address:</label>
+        <input type="email" class="form-control email" id="email email" name="email" placeholder="jsmith@yahoo.com" required ng-model="contactController.email" ng-minlength="4">
 
-</form>
-<div id="success">
-    <span><p><em>Thanks for reaching out, I look forward to speaking with you soon!<em></p></span>
-</div>  
-<div id="error">
-    <span><p>Something went wrong, try refreshing and submitting the form again.</p></span>
+        <div class="help-block" ng-messages="contactform.email.$error" ng-if="contactform.email.$touched">
+        	<p ng-message="minlength">The email address entered is too short.</p>
+        	<p ng-message="required">Your email is required</p>
+        	<p ng-message="email">Please enter a valid email address</p>
+        </div>
+    </div>
+
+    <div class="form-group phone-div" ng-class="{ 'has-error': contactform.phoneNum.$touched && contactform.phoneNum.$invalid }">
+        <label for="phoneNum">Phone Number:</label>
+        <input type="text" class="form-control phone" id="phoneNum" name="phoneNum" placeholder="1234567890" ng-model="contactController.phoneNum" ng-pattern="/^\d+$/" ng-minlength="10" ng-maxlength="10" >
+
+         <div class="help-block" ng-messages="contactform.phoneNum.$error" ng-if="contactform.phoneNum.$touched">
+        	<p ng-message="minlength">Please enter your full 10 digit phone number.</p>
+        	<p ng-message="maxlength">Phone number must be no longer than 10 digits.(No dashes or periods)</p>
+        	<p ng-message="pattern">Please enter a valid phone number.(No dashes or periods)</p>
+        </div>
+    </div>
+
+    <div class="form-group message-div" ng-class="{ 'has-error': contactform.message.$touched && contactform.message.$invalid }">
+        <label for="message">Message</label>
+        <textarea class="form-control message" rows="3" placeholder="Hey James..." name="message" ng-model="contactController.message" ng-minlength="10" required></textarea>
+
+        <div class="help-block" ng-messages="contactform.message.$error" ng-if="contactform.message.$touched">
+        	<p ng-message="minlength">Please be more descriptive.</p>
+        	<p ng-message="required">Why are you reaching out?</p>
+        </div>
+
+    </div>
+    <div class="button-div form-group">
+        <button style="color:white;" class="btn btn-pg btn-ct" type="submit" id="submit" name="submit">Submit</button>
+    </div>
+    </div>
+    </div>
+
+    </form>
+    <div id="success">
+        <span><p><em>Thanks for reaching out, I look forward to speaking with you soon!</em></p></span>
+    </div>  
+    <div id="error">
+        <span><p>Something went wrong, try refreshing and submitting the form again.</p></span>
+    </div>
+    </div>
 </div>
